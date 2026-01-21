@@ -1,0 +1,73 @@
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+:root {
+    --premium-radius: 16px;
+    --premium-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    --primary-purple: #b73a3a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', Roboto, "Helvetica Neue", sans-serif;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
+
+/* Global Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Premium Card Style (Global Utility) */
+.premium-card {
+    background: white;
+    border-radius: var(--premium-radius);
+    box-shadow: var(--premium-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+}
+
+/* Helper classes */
+.spacer {
+    flex: 1 1 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+/* Override Material Card global styles for consistency */
+mat-card {
+    border-radius: var(--premium-radius) !important;
+    box-shadow: var(--premium-shadow) !important;
+    background-color: white;
+}
+
+/* Button overrides for rounded look */
+button.mat-mdc-raised-button {
+    border-radius: 8px !important;
+    padding: 24px 32px !important;
+    /* Larger click areas */
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.5px !important;
+}

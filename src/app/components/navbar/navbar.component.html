@@ -1,0 +1,17 @@
+<mat-toolbar class="premium-navbar">
+    <div class="logo-container">
+        <mat-icon class="logo-icon">storefront</mat-icon>
+        <a routerLink="/" class="logo">FoodDeliveryApp</a>
+    </div>
+    <span class="spacer"></span>
+
+    <div class="nav-links">
+        <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products</a>
+        <a mat-button routerLink="/order-status" routerLinkActive="active">My Orders</a>
+
+        <a mat-icon-button routerLink="/cart" class="cart-btn">
+            <mat-icon [matBadge]="(cartCount$ | async) || 0" matBadgeColor="warn"
+                [matBadgeHidden]="(cartCount$ | async) === 0">shopping_cart</mat-icon>
+        </a>
+    </div>
+</mat-toolbar>

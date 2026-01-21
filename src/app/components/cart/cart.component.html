@@ -1,0 +1,64 @@
+<div class="cart-container">
+    <h2 class="cart-title">Your Cart</h2>
+
+    <div class="cart-layout" *ngIf="(cartItems$ | async)?.length as count; else emptyCart">
+        <!-- Cart Items List -->
+        <div class="cart-items-list">
+            <mat-card *ngFor="let item of cartItems$ | async" class="cart-item-card">
+                <div class="item-details">
+                    <img [src]="item.imageUrl" [alt]="item.name" class="item-image">
+                    <div class="item-text">
+                        <h3>{{item.name}}</h3>
+                        <p class="item-price">${{item.price}}</p>
+                    </div>
+                </div>
+
+                <div class="quantity-controls">
+                    <button mat-icon-button (click)="decrement(item)" color="warn">
+                        <mat-icon>remove_circle_outline</mat-icon>
+                    </button>
+                    <span class="quantity-display">{{item.quantity}}</span>
+                    <button mat-icon-button (click)="increment(item)" color="primary">
+                        <mat-icon>add_circle_outline</mat-icon>
+                    </button>
+                </div>
+
+                <div class="item-total-price">
+                    ${{(item.price * item.quantity).toFixed(2)}}
+                </div>
+            </mat-card>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary-container">
+            <mat-card class="summary-card">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span class="text-gray-600">Subtotal</span>
+                    <span>${{cartService.getTotalAmount().toFixed(2)}}</span>
+                </div>
+                <div class="summary-row">
+                    <span class="text-gray-600">Delivery Fee</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span>${{cartService.getTotalAmount().toFixed(2)}}</span>
+                </div>
+                <button mat-raised-button color="primary" class="checkout-btn" routerLink="/checkout"
+                    [disabled]="cartService.getTotalAmount() === 0">
+                    Proceed to Checkout
+                </button>
+            </mat-card>
+        </div>
+    </div>
+
+    <ng-template #emptyCart>
+        <div class="empty-cart-state">
+            <mat-icon class="empty-icon">shopping_cart</mat-icon>
+            <h3 class="empty-text">Your cart is empty</h3>
+            <p class="empty-subtext">Add some delicious food to get started!</p>
+            <button mat-raised-button color="primary" routerLink="/">Browse Restaurants</button>
+        </div>
+    </ng-template>
+</div>

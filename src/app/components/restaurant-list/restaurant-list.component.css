@@ -1,0 +1,54 @@
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+    padding: 20px 0;
+}
+
+.restaurant-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: white;
+    /* rounded corners and shadow handled by global mat-card style if applicable,
+       or we reinforce it here just in case */
+    border-radius: var(--premium-radius) !important;
+    overflow: hidden;
+    /* Ensure image respects radius */
+}
+
+/* Image styles */
+.restaurant-card img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+mat-card-content {
+    flex-grow: 1;
+    padding: 24px !important;
+}
+
+/* Typography Enhancements */
+mat-card-title {
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 8px !important;
+}
+
+mat-card-subtitle {
+    font-size: 0.95rem !important;
+    color: #000000;
+}
+
+mat-card-actions {
+    padding: 16px 24px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.view-menu-btn {
+    background-color: #b11f1f !important;
+    color: white !important;
+}

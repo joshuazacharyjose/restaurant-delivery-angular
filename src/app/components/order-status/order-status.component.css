@@ -1,0 +1,94 @@
+.success-icon-container {
+    background-color: #e8f5e9;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    color: #4caf50;
+    /* Green */
+}
+
+.order-id-badge {
+    background: #f5f5f5;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #333;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* Stepper */
+.order-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto 48px auto;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #aaa;
+}
+
+.step-item.active .step-circle {
+    border-color: #4caf50;
+    color: #4caf50;
+    background: #e8f5e9;
+}
+
+.step-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.step-item.active .step-title {
+    color: #4caf50;
+}
+
+.step-connector {
+    flex: 1;
+    height: 2px;
+    background: #e0e0e0;
+    margin-bottom: 24px;
+    /* Align with center of circle approx */
+}
+
+.step-connector.active {
+    background: #4caf50;
+}
+
+.wide-btn {
+    padding: 12px 32px !important;
+    font-size: 1.1rem !important;
+    border-radius: 30px !important;
+    /* Pill shape */
+}

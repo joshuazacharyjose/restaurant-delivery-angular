@@ -1,0 +1,95 @@
+<div class="checkout-container">
+
+    <!-- Visual Stepper -->
+    <div class="stepper-header">
+        <div class="step completed">
+            <div class="step-icon"><mat-icon>check</mat-icon></div>
+            <span class="step-label">Customer Details</span>
+        </div>
+        <div class="step-line active"></div>
+        <div class="step active">
+            <div class="step-icon">2</div>
+            <span class="step-label">Shipping Address</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+            <div class="step-icon">3</div>
+            <span class="step-label">Review & Pay</span>
+        </div>
+    </div>
+
+    <mat-card class="premium-card checkout-card">
+        <h2 class="card-title text-center">Secure Checkout</h2>
+
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="checkout-form mt-4">
+
+            <div class="form-section">
+                <h3 class="section-title">Delivery Details</h3>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Full Name *</mat-label>
+                    <input matInput formControlName="name" placeholder="John Doe">
+                    <mat-error *ngIf="checkoutForm.get('name')?.hasError('required')">Name is required</mat-error>
+                </mat-form-field>
+
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Email Address *</mat-label>
+                        <input matInput formControlName="email" type="email" placeholder="john@example.com">
+                        <mat-error *ngIf="checkoutForm.get('email')?.hasError('email')">Invalid email</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Phone Number *</mat-label>
+                        <input matInput type="tel" placeholder="9876543210">
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Delivery Address *</mat-label>
+                    <textarea matInput formControlName="address" rows="3" placeholder="123 Main St, Apt 4B"></textarea>
+                    <mat-error *ngIf="checkoutForm.get('address')?.hasError('required')">Address is required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="form-section mt-4">
+                <h3 class="section-title">Payment Information</h3>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Card Number</mat-label>
+                    <input matInput formControlName="cardNumber" type="text" maxlength="16"
+                        placeholder="0000 0000 0000 0000">
+                    <mat-icon matSuffix>credit_card</mat-icon>
+                    <mat-error *ngIf="checkoutForm.get('cardNumber')?.hasError('required')">Required</mat-error>
+                </mat-form-field>
+
+                <div class="form-row">
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Expiry Date (MM/YY)</mat-label>
+                        <input matInput formControlName="expiryDate" placeholder="12/25">
+                        <mat-error *ngIf="checkoutForm.get('expiryDate')?.hasError('required')">Required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>CVV</mat-label>
+                        <input matInput formControlName="cvv" placeholder="123" maxlength="4">
+                        <mat-error *ngIf="checkoutForm.get('cvv')?.hasError('required')">Required</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="total-bar">
+                <span>Total Amount</span>
+                <span class="total-price">${{cartService.getTotalAmount().toFixed(2)}}</span>
+            </div>
+
+            <div class="actions">
+                <button mat-button type="button" routerLink="/cart">BACK</button>
+                <button mat-raised-button color="primary" type="submit"
+                    [disabled]="!checkoutForm.valid || cartService.getTotalAmount() === 0" class="place-order-btn">
+                    PLACE ORDER (${{cartService.getTotalAmount().toFixed(2)}})
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

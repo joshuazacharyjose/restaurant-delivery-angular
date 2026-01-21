@@ -1,0 +1,220 @@
+[
+    {
+        "id": 1,
+        "name": "Pizza Paradise",
+        "cuisine": "Italian",
+        "rating": 4.5,
+        "description": "Authentic wood-fired pizzas made with family recipes.",
+        "address": "123 Main St, Foodville",
+        "priceRange": "$$",
+        "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "deliveryTime": 30,
+        "menu": [
+            {
+                "id": 101,
+                "name": "Margherita Pizza",
+                "description": "Classic tomato and mozzarella",
+                "price": 12.99,
+                "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Main Course"
+            },
+            {
+                "id": 102,
+                "name": "Pepperoni Feast",
+                "description": "Spicy pepperoni and extra cheese",
+                "price": 15.99,
+                "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": false,
+                "category": "Main Course"
+            },
+            {
+                "id": 103,
+                "name": "Tiramisu",
+                "description": "Classic Italian dessert",
+                "price": 6.99,
+                "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Desserts"
+            },
+            {
+                "id": 104,
+                "name": "Garlic Bread",
+                "description": "Crispy bread with garlic butter",
+                "price": 4.99,
+                "imageUrl": "https://plus.unsplash.com/premium_photo-1711752902734-a36167479983?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": true,
+                "category": "Starters"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Burger Barn",
+        "cuisine": "American",
+        "rating": 4.2,
+        "description": "Juicy, handmade burgers and crispy fries.",
+        "address": "456 Oak Ave, Burger Town",
+        "priceRange": "$",
+        "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "deliveryTime": 25,
+        "menu": [
+            {
+                "id": 201,
+                "name": "Classic Cheeseburger",
+                "description": "Beef patty, cheddar, lettuce, tomato",
+                "price": 10.99,
+                "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": false,
+                "category": "Main Course"
+            },
+            {
+                "id": 202,
+                "name": "Veggie Burger",
+                "description": "Plant-based patty with avocado",
+                "price": 11.99,
+                "imageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Main Course"
+            },
+            {
+                "id": 203,
+                "name": "Chocolate Sundae",
+                "description": "Ice cream with fudge",
+                "price": 5.99,
+                "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Desserts"
+            },
+            {
+                "id": 204,
+                "name": "Onion Rings",
+                "description": "Deep fried golden rings",
+                "price": 4.99,
+                "imageUrl": "https://images.unsplash.com/photo-1639024471283-03518883512d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Starters"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Sushi Spot",
+        "cuisine": "Japanese",
+        "rating": 4.8,
+        "description": "Fresh sushi and sashimi prepared by expert chefs.",
+        "address": "789 Pine Ln, Ocean City",
+        "priceRange": "$$$",
+        "imageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "deliveryTime": 40,
+        "menu": [
+            {
+                "id": 301,
+                "name": "California Roll",
+                "description": "Crab, avocado, cucumber",
+                "price": 8.99,
+                "imageUrl": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": false,
+                "category": "Starters"
+            },
+            {
+                "id": 302,
+                "name": "Spicy Tuna Roll",
+                "description": "Fresh tuna with spicy mayo",
+                "price": 9.99,
+                "imageUrl": "https://plus.unsplash.com/premium_photo-1712949140529-203336f93d17?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": false,
+                "category": "Main Course"
+            },
+            {
+                "id": 303,
+                "name": "Mochi Ice Cream",
+                "description": "Sweet rice dough with ice cream",
+                "price": 5.50,
+                "imageUrl": "https://plus.unsplash.com/premium_photo-1701104846868-72f9e43a8f25?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": true,
+                "category": "Desserts"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Taco Fiesta",
+        "cuisine": "Mexican",
+        "rating": 4.6,
+        "description": "Vibrant Mexican street food and refreshing margaritas.",
+        "address": "321 Salsa St, Flavor Town",
+        "priceRange": "$",
+        "imageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "deliveryTime": 35,
+        "menu": [
+            {
+                "id": 401,
+                "name": "Tacos Al Pastor",
+                "description": "Marinated pork with pineapple",
+                "price": 3.50,
+                "imageUrl": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": false,
+                "category": "Main Course"
+            },
+            {
+                "id": 402,
+                "name": "Guacamole & Chips",
+                "description": "Freshly made guacamole with crispy chips",
+                "price": 6.99,
+                "imageUrl": "https://plus.unsplash.com/premium_photo-1679435363575-093a3d0a52f3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": true,
+                "category": "Starters"
+            },
+            {
+                "id": 403,
+                "name": "Churros",
+                "description": "Fried dough pastry",
+                "price": 4.99,
+                "imageUrl": "https://images.unsplash.com/photo-1624371414361-e670edf4898d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": true,
+                "category": "Desserts"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Thai Spice",
+        "cuisine": "Thai",
+        "rating": 4.8,
+        "description": "Authentic Thai flavors with a modern twist.",
+        "address": "987 Lotus Ln, Siam Square",
+        "priceRange": "$$",
+        "imageUrl": "https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        "deliveryTime": 40,
+        "menu": [
+            {
+                "id": 601,
+                "name": "Pad Thai",
+                "description": "Stir-fried rice noodles with shrimp/chicken",
+                "price": 13.50,
+                "imageUrl": "https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                "isVegetarian": false,
+                "category": "Main Course"
+            },
+            {
+                "id": 602,
+                "name": "Green Curry",
+                "description": "Spicy green curry with vegetables",
+                "price": 12.99,
+                "imageUrl": "https://images.unsplash.com/photo-1594756202469-9ff9799b2e4e?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": true,
+                "category": "Main Course"
+            },
+            {
+                "id": 603,
+                "name": "Mango Sticky Rice",
+                "description": "Sweet sticky rice with mango",
+                "price": 7.50,
+                "imageUrl": "https://images.unsplash.com/photo-1705056508219-0aa0ceb16820?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "isVegetarian": true,
+                "category": "Desserts"
+            }
+        ]
+    }
+]

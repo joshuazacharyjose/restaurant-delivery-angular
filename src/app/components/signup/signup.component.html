@@ -1,0 +1,38 @@
+<div class="signup-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput type="text" name="name" ngModel required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" name="email" ngModel required email>
+                    <mat-error *ngIf="signupForm.controls['email']?.invalid">Invalid email</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" name="password" ngModel required minlength="6">
+                    <mat-error *ngIf="signupForm.controls['password']?.invalid">Min 6 chars</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput name="address" ngModel required></textarea>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid"
+                    class="full-width">Sign Up</button>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <a routerLink="/login" mat-button>Already have an account? Login</a>
+        </mat-card-actions>
+    </mat-card>
+</div>

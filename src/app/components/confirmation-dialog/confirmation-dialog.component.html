@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Confirm Order</h2>
+<mat-dialog-content>
+    <p>Are you sure you want to place this order?</p>
+    <div class="mt-2 text-sm text-gray-600">
+        Total Amount: <strong>${{ data.total | number:'1.2-2' }}</strong>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

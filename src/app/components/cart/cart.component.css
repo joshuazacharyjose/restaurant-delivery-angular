@@ -1,0 +1,152 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.cart-title {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cart-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .cart-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.cart-items-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+/* Item details left side */
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-text h3 {
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.item-price {
+    color: #666;
+    margin: 0;
+}
+
+/* Quantity controls center */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-display {
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Item Total right side */
+.item-total-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Order Summary right column */
+.order-summary-container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .order-summary-container {
+        width: 320px;
+        position: sticky;
+        top: 24px;
+    }
+}
+
+.summary-card {
+    padding: 24px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.summary-row.total {
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 24px;
+    padding: 8px;
+    font-size: 1.1rem;
+}
+
+/* Empty State */
+.empty-cart-state {
+    text-align: center;
+    padding: 64px 0;
+    background-color: #fafafa;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed #e0e0e0;
+}
+
+.empty-icon {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+.empty-text {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.empty-subtext {
+    color: #888;
+    margin-bottom: 24px;
+}

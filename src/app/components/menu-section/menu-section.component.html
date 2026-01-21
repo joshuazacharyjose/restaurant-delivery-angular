@@ -1,0 +1,28 @@
+<div class="menu-grid">
+    <mat-card *ngFor="let item of items$ | async" class="menu-item-card">
+        <img mat-card-image [src]="item.imageUrl" [alt]="item.name">
+        <mat-card-content>
+            <div class="item-header">
+                <h3 class="item-name">{{ item.name }}</h3>
+                <span class="item-price">${{ item.price }}</span>
+            </div>
+            <p class="item-desc">{{ item.description }}</p>
+            <div *ngIf="item.isVegetarian" class="vegetarian-tag"
+                style="display: flex; align-items: center; color: green; font-size: 0.9em;">
+                <mat-icon style="font-size: 16px; width: 16px; height: 16px; margin-right: 4px;">eco</mat-icon>
+                Vegetarian
+            </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" (click)="addToCart(item)">
+                <mat-icon>add_shopping_cart</mat-icon> Add to Cart
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <div *ngIf="(items$ | async)?.length === 0" class="empty-state">
+        <mat-icon
+            style="font-size: 48px; width: 48px; height: 48px; margin-bottom: 16px; color: #ccc;">restaurant_menu</mat-icon>
+        <p style="font-size: 1.25rem;">No items found in this category.</p>
+    </div>
+</div>

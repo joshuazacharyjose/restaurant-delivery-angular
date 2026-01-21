@@ -1,0 +1,56 @@
+<div class="container mx-auto p-4 max-w-4xl">
+    <div *ngIf="currentOrder$ | async as order; else noOrder">
+
+        <!-- Success Header -->
+        <div class="text-center mb-12 mt-8">
+            <div class="success-icon-container">
+                <mat-icon class="success-icon">check_circle</mat-icon>
+            </div>
+            <h1 class="text-4xl font-bold mt-6 mb-2 text-green-600">Order Confirmed!</h1>
+            <div class="order-id-badge">Order ID: {{order.id}}</div>
+            <p class="mt-4 text-gray-500 text-lg">Thank you for your purchase. We've received your order and are
+                preparing it for shipment.</p>
+        </div>
+
+        <!-- Order Progress Stepper -->
+        <div class="order-stepper mb-12">
+            <div class="step-item active">
+                <div class="step-circle"><mat-icon>assignment</mat-icon></div>
+                <div class="step-title">Order Placed</div>
+            </div>
+            <div class="step-connector active"></div>
+
+            <div class="step-item active">
+                <div class="step-circle"><mat-icon>loop</mat-icon></div>
+                <div class="step-title">Processing</div>
+            </div>
+            <div class="step-connector"></div>
+
+            <div class="step-item">
+                <div class="step-circle"><mat-icon>check_box</mat-icon></div>
+                <div class="step-title">Quality Check</div>
+            </div>
+            <div class="step-connector"></div>
+
+            <div class="step-item">
+                <div class="step-circle"><mat-icon>local_shipping</mat-icon></div>
+                <div class="step-title">Dispatched</div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex justify-center gap-6 mb-12">
+            <button mat-raised-button color="primary" routerLink="/" class="wide-btn">CONTINUE SHOPPING</button>
+            <button mat-stroked-button routerLink="/order-status">VIEW MY ORDERS</button>
+        </div>
+    </div>
+
+    <ng-template #noOrder>
+        <div class="text-center py-20 premium-card mt-8">
+            <mat-icon class="text-6xl text-gray-300 h-16 w-16 mb-4">fastfood</mat-icon>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">No active orders</h3>
+            <p class="text-gray-500 mb-8">Looks like you haven't placed an order yet.</p>
+            <button mat-raised-button color="primary" routerLink="/">Browse Restaurants</button>
+        </div>
+    </ng-template>
+</div>
