@@ -6,14 +6,7 @@
   <p align="center">
     A robust food delivery platform featuring multi-restaurant browsing, real-time cart management, and order tracking.
     <br />
-    <a href="[INSERT_DEMO_LINK]"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="[INSERT_DEMO_LINK]">View Demo</a>
-    ·
-    <a href="https://github.com/joshuazacharyjose/restaurant-delivery-angular/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/joshuazacharyjose/restaurant-delivery-angular/issues">Request Feature</a>
+    <a href="https://restaurant-delivery-angular.vercel.app/">View Demo</a>
   </p>
 </div>
 
@@ -113,13 +106,11 @@ To get a local copy up and running, follow these simple steps.
 
 | Home Page | Menu View |
 |:---:|:---:|
-| <img src="[LINK_TO_IMAGE_1]" width="300"> | <img src="[LINK_TO_IMAGE_2]" width="300"> |
+| <img src="https://i.ibb.co/WvZWdc15/Screenshot-2026-01-24-052230.png" alt="Screenshot-2026-01-24-052230" border="0"> | <img src="https://i.ibb.co/0VpQgyyR/Screenshot-2026-01-24-052247.png" alt="Screenshot-2026-01-24-052247" border="0"> |
 
 | Cart | Checkout |
 |:---:|:---:|
-| <img src="[LINK_TO_IMAGE_3]" width="300"> | <img src="[LINK_TO_IMAGE_4]" width="300"> |
-
-> *Tip: Upload your screenshots to the 'assets' folder or use an image hosting service.*
+| <img src="https://i.ibb.co/cSst76hX/Screenshot-2026-01-24-052410.png" alt="Screenshot-2026-01-24-052410" border="0"> | <img src="https://i.ibb.co/6R4f4fHd/Screenshot-2026-01-24-052517.png" alt="Screenshot-2026-01-24-052517" border="0"> |
 
 ## 🛣 Roadmap
 
@@ -132,5 +123,5 @@ To get a local copy up and running, follow these simple steps.
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/joshuazacharyjose">Joshua Zachary Jose</a>
+  Made with passion by <a href="https://github.com/joshuazacharyjose">Joshua Zachary Jose</a> and team
 </p>
